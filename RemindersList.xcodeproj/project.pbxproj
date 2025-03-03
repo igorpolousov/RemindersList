@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E6A2D75D6B20014D9E4 /* AppDelegate.swift */; };
 		C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */; };
-		C2DC7E762D75D6B20014D9E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E722D75D6B20014D9E4 /* ViewController.swift */; };
+		C2DC7E762D75D6B20014D9E4 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E722D75D6B20014D9E4 /* ReminderListViewController.swift */; };
 		C2DC7E772D75D6B20014D9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E6B2D75D6B20014D9E4 /* Assets.xcassets */; };
 		C2DC7E792D75D6B20014D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E6E2D75D6B20014D9E4 /* LaunchScreen.storyboard */; };
 		C2DC7E7A2D75D6B20014D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E702D75D6B20014D9E4 /* Main.storyboard */; };
@@ -25,7 +25,7 @@
 		C2DC7E6D2D75D6B20014D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2DC7E6F2D75D6B20014D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C2DC7E722D75D6B20014D9E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2DC7E722D75D6B20014D9E4 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
 		C2DC7E7B2D75D73D0014D9E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +67,7 @@
 				C2DC7E6E2D75D6B20014D9E4 /* LaunchScreen.storyboard */,
 				C2DC7E702D75D6B20014D9E4 /* Main.storyboard */,
 				C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */,
-				C2DC7E722D75D6B20014D9E4 /* ViewController.swift */,
+				C2DC7E722D75D6B20014D9E4 /* ReminderListViewController.swift */,
 				C2DC7E7B2D75D73D0014D9E4 /* README.md */,
 			);
 			path = RemindersList;
@@ -158,7 +158,7 @@
 			files = (
 				C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */,
 				C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */,
-				C2DC7E762D75D6B20014D9E4 /* ViewController.swift in Sources */,
+				C2DC7E762D75D6B20014D9E4 /* ReminderListViewController.swift in Sources */,
 				C2DC7E7F2D75E8EA0014D9E4 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

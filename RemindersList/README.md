@@ -14,6 +14,7 @@ Reminders app - приложение заметки на UIKit
     3. Перетаскиванием добавляем CollectionViewController на canvas
     4. Раскроем( in document outline) CollectinoViewController и удалим collection view cell
     5. В Document outline выбираем CollectionViewController -> в правой верхней части экрана выберем Attributes inspector -> поставить галочку в поле Is initial view controller
+    
 ## Section 3: Create reminder model
     В этом приложении будет использованна структура(архитектура) MVC - Model View Controller
     1. Создадим новую папку Models
@@ -23,5 +24,14 @@ Reminders app - приложение заметки на UIKit
     4. Добавим опциональное значение notes со значением по умолчанию nil
     5. isCompleded 
     6. Добавим раширение к структуре Reminder с аннотацией #if Debug -> #endif
-    7. Добавим массив с экземплярами структуры Reminder в extension с ключевым словом static - 
-
+    7. Добавим массив с экземплярами структуры Reminder в extension с ключевым словом static 
+    
+## Section 4: Configure a collection as list
+    Конфигурация  collection view будет создаваться при помощи compositional layout
+    1. Соединим Main.storyboard и ViewController и переименуем название класса и суперкласса -> новоё имя добавим при помощи refactor->rename(mouse right click)
+    2. В Main.storyboard справа во вкладке identity inspector назначим ReminderListViewController
+    3. В ReminderListViewController создадим функцию listLayout()
+    4. Убираем разделители(сепараторы) и цвет заднего фона ставим прозрачным
+    5. Вернём в функции UICollectionViewCompositionalLayout с конфигурацией listConfiguration
+    6. Во ViewDidLoad создадим экземпляр listLayout
+    7. Присвоим collectionView - listLayout
