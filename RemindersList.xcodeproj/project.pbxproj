@@ -6,30 +6,27 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E6A2D75D6B20014D9E4 /* AppDelegate.swift */; };
+		C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */; };
+		C2DC7E762D75D6B20014D9E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E722D75D6B20014D9E4 /* ViewController.swift */; };
+		C2DC7E772D75D6B20014D9E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E6B2D75D6B20014D9E4 /* Assets.xcassets */; };
+		C2DC7E792D75D6B20014D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E6E2D75D6B20014D9E4 /* LaunchScreen.storyboard */; };
+		C2DC7E7A2D75D6B20014D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E702D75D6B20014D9E4 /* Main.storyboard */; };
+		C2DC7E7C2D75D73D0014D9E4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E7B2D75D73D0014D9E4 /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C2DC7E522D75D6A00014D9E4 /* RemindersList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindersList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2DC7E6A2D75D6B20014D9E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2DC7E6B2D75D6B20014D9E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2DC7E6C2D75D6B20014D9E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2DC7E6D2D75D6B20014D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C2DC7E6F2D75D6B20014D9E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C2DC7E722D75D6B20014D9E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2DC7E7B2D75D73D0014D9E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C2DC7E642D75D6A30014D9E4 /* Exceptions for "RemindersList" folder in "RemindersList" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C2DC7E512D75D6A00014D9E4 /* RemindersList */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C2DC7E542D75D6A00014D9E4 /* RemindersList */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C2DC7E642D75D6A30014D9E4 /* Exceptions for "RemindersList" folder in "RemindersList" target */,
-			);
-			path = RemindersList;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C2DC7E4F2D75D6A00014D9E4 /* Frameworks */ = {
@@ -45,7 +42,7 @@
 		C2DC7E492D75D6A00014D9E4 = {
 			isa = PBXGroup;
 			children = (
-				C2DC7E542D75D6A00014D9E4 /* RemindersList */,
+				C2DC7E732D75D6B20014D9E4 /* RemindersList */,
 				C2DC7E532D75D6A00014D9E4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +53,21 @@
 				C2DC7E522D75D6A00014D9E4 /* RemindersList.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C2DC7E732D75D6B20014D9E4 /* RemindersList */ = {
+			isa = PBXGroup;
+			children = (
+				C2DC7E6A2D75D6B20014D9E4 /* AppDelegate.swift */,
+				C2DC7E6B2D75D6B20014D9E4 /* Assets.xcassets */,
+				C2DC7E6C2D75D6B20014D9E4 /* Info.plist */,
+				C2DC7E6E2D75D6B20014D9E4 /* LaunchScreen.storyboard */,
+				C2DC7E702D75D6B20014D9E4 /* Main.storyboard */,
+				C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */,
+				C2DC7E722D75D6B20014D9E4 /* ViewController.swift */,
+				C2DC7E7B2D75D73D0014D9E4 /* README.md */,
+			);
+			path = RemindersList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,9 +84,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C2DC7E542D75D6A00014D9E4 /* RemindersList */,
 			);
 			name = RemindersList;
 			packageProductDependencies = (
@@ -122,6 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2DC7E772D75D6B20014D9E4 /* Assets.xcassets in Resources */,
+				C2DC7E792D75D6B20014D9E4 /* LaunchScreen.storyboard in Resources */,
+				C2DC7E7C2D75D73D0014D9E4 /* README.md in Resources */,
+				C2DC7E7A2D75D6B20014D9E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,10 +145,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */,
+				C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */,
+				C2DC7E762D75D6B20014D9E4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C2DC7E6E2D75D6B20014D9E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2DC7E6D2D75D6B20014D9E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C2DC7E702D75D6B20014D9E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2DC7E6F2D75D6B20014D9E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C2DC7E662D75D6A30014D9E4 /* Debug */ = {
