@@ -14,6 +14,7 @@
 		C2DC7E792D75D6B20014D9E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E6E2D75D6B20014D9E4 /* LaunchScreen.storyboard */; };
 		C2DC7E7A2D75D6B20014D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E702D75D6B20014D9E4 /* Main.storyboard */; };
 		C2DC7E7C2D75D73D0014D9E4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E7B2D75D73D0014D9E4 /* README.md */; };
+		C2DC7E7F2D75E8EA0014D9E4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		C2DC7E712D75D6B20014D9E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C2DC7E722D75D6B20014D9E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2DC7E7B2D75D73D0014D9E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		C2DC7E732D75D6B20014D9E4 /* RemindersList */ = {
 			isa = PBXGroup;
 			children = (
+				C2DC7E7D2D75E78D0014D9E4 /* Models */,
 				C2DC7E6A2D75D6B20014D9E4 /* AppDelegate.swift */,
 				C2DC7E6B2D75D6B20014D9E4 /* Assets.xcassets */,
 				C2DC7E6C2D75D6B20014D9E4 /* Info.plist */,
@@ -68,6 +71,14 @@
 				C2DC7E7B2D75D73D0014D9E4 /* README.md */,
 			);
 			path = RemindersList;
+			sourceTree = "<group>";
+		};
+		C2DC7E7D2D75E78D0014D9E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */,
 				C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */,
 				C2DC7E762D75D6B20014D9E4 /* ViewController.swift in Sources */,
+				C2DC7E7F2D75E8EA0014D9E4 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
