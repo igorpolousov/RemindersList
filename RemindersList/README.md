@@ -35,3 +35,15 @@ Reminders app - приложение заметки на UIKit
     5. Вернём в функции UICollectionViewCompositionalLayout с конфигурацией listConfiguration
     6. Во ViewDidLoad создадим экземпляр listLayout
     7. Присвоим collectionView - listLayout
+    
+## Section 5: Configure data source
+   В этой секции сделаем регистрацию cell в collection view и добавим apperance(как будет выглядеть) к cell. Соединим data source и cell.
+   
+   Будет использован Diffable data source - позволяет делать update и анимацию интерфейса при его изменениях
+   
+   1. Создадим регистрацию новой ячейки cell 
+   2. Получим данные Reminder для каждой ячейки
+   3. Получим дизайн ячейки (Конфигурация контента ячейки по умолчанию)
+   4. Добавим значения для content configuration 
+   5. Добавим type alias для Diffable data source
+   6. Добавим опциональное свойство DataSource
