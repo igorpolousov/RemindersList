@@ -27,6 +27,10 @@ class ReminderListViewController: UICollectionViewController {
             cell.contentConfiguration = contentConfiguration
         }
         
+        dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+        })
+        
     }
 
     private func listLayout() -> UICollectionViewCompositionalLayout {

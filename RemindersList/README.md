@@ -47,3 +47,9 @@ Reminders app - приложение заметки на UIKit
    4. Добавим значения для content configuration 
    5. Добавим type alias для Diffable data source
    6. Добавим опциональное свойство DataSource
+   7. Присвоим значение для data source
+   8. Добавим регистрацию ячейки
+   
+## Section 6: Apply a snapshot
+
+
