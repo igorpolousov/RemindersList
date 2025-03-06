@@ -10,6 +10,7 @@ import UIKit
 class ReminderListViewController: UICollectionViewController {
     
     typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
     
     var dataSource: DataSource?
 
@@ -30,6 +31,23 @@ class ReminderListViewController: UICollectionViewController {
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         })
+        
+        var snapshot = Snapshot()
+        snapshot.appendSections([0])
+        // простой вариант добавить массив с reminder titles
+//        var reminderTitles: [String] = []
+//        for reminder in Reminder.sampleData {
+//            reminderTitles.append(reminder.title)
+//        }
+//        snapshot.appendItems(reminderTitles)
+        
+        // Вариант с применением функционального кода
+        snapshot.appendItems(Reminder.sampleData.map {$0.title})
+        dataSource?.apply(snapshot)
+        
+        collectionView.dataSource = dataSource
+        
+        
         
     }
 
