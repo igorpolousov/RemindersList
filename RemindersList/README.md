@@ -78,3 +78,15 @@ Reminders app - приложение заметки на UIKit
     8. Создадим локализованную строку для отображения date time
     9. Вернём строку для второго условия
     10. Создадим еще одно вычисляемое свойство, которое будет показфывать строку если дата является текущей датой, если дата не является текущей, то вернём просто отформатированную дату при помощи formatted()
+    
+## Section 8: Organize view controllers
+    Поскольку view controller включает в себя много кода, для того чтобы упорядочить код, часть кода будет переносится в extensions в отдельные файлы. Поскольку view controller может иметь много задач, разделение в разные фалы в расширения существенно облегчит в дальнейшем поиск ошибок и добавление новых фич
+    1. Выбрать файл ReminderListViewController.swift -> правая кнопка мыши -> создать паку ListViewController (New group from selection or new folder from selection)
+    2. Создадим файл ReminderListViewController+DataSource.swift,  import UIKit
+    3. Сделаем extension ReminderListViewController и поместим в него typealias
+    4. Создадим метод cellRegistrationHandler и перенесём регистрацию ячейки в новый метод
+    5. В cellRegistration вместо замыкания используем метод из пункта 4
+    6. Добавим к данным ячейки due date из структуры Reminder
+    7. Изменим шрифт для вторичного текста
+    8. Запустим приложение
+    
