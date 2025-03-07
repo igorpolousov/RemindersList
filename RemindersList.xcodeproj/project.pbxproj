@@ -15,6 +15,7 @@
 		C2DC7E7A2D75D6B20014D9E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E702D75D6B20014D9E4 /* Main.storyboard */; };
 		C2DC7E7C2D75D73D0014D9E4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C2DC7E7B2D75D73D0014D9E4 /* README.md */; };
 		C2DC7E7F2D75E8EA0014D9E4 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */; };
+		C2DC7E812D79C65C0014D9E4 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E802D79C65C0014D9E4 /* Date+Today.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C2DC7E722D75D6B20014D9E4 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
 		C2DC7E7B2D75D73D0014D9E4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		C2DC7E802D79C65C0014D9E4 /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */,
+				C2DC7E802D79C65C0014D9E4 /* Date+Today.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */,
+				C2DC7E812D79C65C0014D9E4 /* Date+Today.swift in Sources */,
 				C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */,
 				C2DC7E762D75D6B20014D9E4 /* ReminderListViewController.swift in Sources */,
 				C2DC7E7F2D75E8EA0014D9E4 /* Reminder.swift in Sources */,
