@@ -9,9 +9,8 @@ import UIKit
 
 class ReminderListViewController: UICollectionViewController {
     
-  
-    
     var dataSource: DataSource?
+    var reminders: [Reminders] = Reminder.sampleData
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +22,7 @@ class ReminderListViewController: UICollectionViewController {
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationhandler)
         
         dataSource = DataSource(collectionView: collectionView, cellProvider: { collectionView, indexPath, itemIdentifier in
-            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+            return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: Reminder.ID)
         })
         
         var snapshot = Snapshot()
@@ -36,7 +35,7 @@ class ReminderListViewController: UICollectionViewController {
 //        snapshot.appendItems(reminderTitles)
         
         // Вариант с применением функционального кода
-        snapshot.appendItems(Reminder.sampleData.map {$0.title})
+        snapshot.appendItems(reminders.map {$0.title})
         dataSource?.apply(snapshot)
         
         collectionView.dataSource = dataSource

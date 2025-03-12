@@ -113,3 +113,17 @@ Reminders app - приложение заметки на UIKit
      
 ## На данном этапе закончена конфигурация ячеек так, чтобы время отображалось корректно во всех регионах и странах, а так же сделали отображение данных по каждому напоминанию включая выполнено оно или нет
     
+## Making reminders identifiable
+    В этой части модель Reminders будет подведена под протокол Identifiable, чтобы можно было изменять каждое отдельное напоминание.
+    
+## Section 11:Making the model identifiable
+    Для того чтобы вносить изменения в отдельные напоминания, нужно чтобы модель имела идентификатор для каждой сущности 
+    1. В файле Reminder.swift подшипешм структуру Reminder под протокол Identifiable и добавим переменную идентификатора в виде строкового значения.
+    2. В файле ReminderListViewController.swift в dataSource изменим стандартный itemIdentifier на Reminder.ID
+    Reminder.ID - это assosiated type из протокола Identifiable 
+    3. Добавим новое свойство remiders - массив Reminder. Зачем понадобилось это свойство? видимо потому что нет возможности вносить изменения непосредственно в свойство sampleReminders структуры Reminder
+    4. Сделаем снова конфигурацию snapshot при помощи свойства из пункта 3
+    5. В type alias DataSource и Snapshot поменяем String на Reminder.ID
+    6. Поменяем identifier для cellRegistrationHandler
+    7. Сделаем получение отдельной сущности reminder из массива 
+    
