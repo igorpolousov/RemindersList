@@ -138,3 +138,17 @@ Reminders app - приложение заметки на UIKit
     5. добавим еще один метод updateReminder(reminder: Reminder)
     6. Изменим cell registration handler при помощи новых методов
     
+## Section 13: Create custom button action
+    В этой секции будет добавлен код, который будет изменять статус напоминания ( выполнено или нет)
+    1. В паке ListViewController добавим файл ReminderDoneButton.swift импорт UIKit и создание класса ReminderDoneButton
+    2. Добавим свойство id
+    3. В файле ReminderListViewController+DataSource.swift создадим метод completeReminder
+    4. Получим reminder с нужным нам ID
+    5. Изменим в этом reminder свойство isComplete и сделаем update
+    6. Создадим новый файл ReminderListViewController+Actions.swift
+    7. В этом файле создадим расширение для ReminderListViewController и в нём создадим метод didPressDoneButton с ключевым словом @objc - которое позволит использовать данный метод с Objective-C в дальнейшем
+    8. Послкольку id опциональное совйство - сделаем unwrap при помощи guard
+    9. Вызоввем метод completeReminder
+    
+    В следущей секции соединим кнопку и метод для кнопки
+    
