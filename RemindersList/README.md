@@ -127,3 +127,14 @@ Reminders app - приложение заметки на UIKit
     6. Поменяем identifier для cellRegistrationHandler
     7. Сделаем получение отдельной сущности reminder из массива 
     
+## Section 12: Create functions for accessing the model
+    1. В файле Reminder.swift сделаем расширение для массива в структуре Reminder. Классно - можно сделать расширение не только для структуры или класса, а сразу для массива. Посмотрим далее как это будет выглядеть в коде. Есть два варианта синтаксиса для написания такого кода:
+    extension [Reminder] или 
+    extension Array where Element == Reminder.
+    Что будет(какая будет разница) если методы ниже поместить в расширение просто структры Reminder
+    2. Напишим функцию, которая будет возовращать index определенного Reminder, будет принимать id и возвращать Self.Index. Array.Index - это type alias для Int
+    3.Напишем guard который будет проверять что найден первый элемент удовлетворяющий ID и вернём index
+    4. В файле ReminderListViewController+DataSource.swift добавим метод reminder(with id:)
+    5. добавим еще один метод updateReminder(reminder: Reminder)
+    6. Изменим cell registration handler при помощи новых методов
+    
