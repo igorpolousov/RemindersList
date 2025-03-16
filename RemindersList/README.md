@@ -152,3 +152,11 @@ Reminders app - приложение заметки на UIKit
     
     В следущей секции соединим кнопку и метод для кнопки
     
+## Section 14: Write a target-action pair
+    1. В файле ReminderListViewController+DataSource.swift изменим класс UIButton на ReminderDoneButton
+    2. Добавим свойство button.id
+    3. Добавим таргет к кнопке
+    4. Build and run
+    
+
+    
