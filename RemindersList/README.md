@@ -171,5 +171,31 @@ Reminders app - приложение заметки на UIKit
     7. Так же скорректируем вызов updateSnapshot() в методе cpmpleteReminder()
     
 ## Section 16: Make the action accessible
+    В этой секции будет добавлена возможность управлять напоминаниями при помощи voiceOver
+    1. В файл ReminderListViewController+DataSource.swift добавим метод doneButtonAccessibilityAction 
+    2. Создадим переменную для названия этого действия
+    3. Создадим свойство action
+    4. Для выполнения действия вызовем метод completeReminder
+    5. В cell registration handler в свойство cell добавим accessebilityCustomAction
+    6. Создадим два свойства reminderCompleteValue и reminderNotCompleteValue
+    7. В cell registration handler добавим свойство cell accessebilityValue
+    
+## Section 17: Preview using accessibility inspector
+    В этой секции рассмотрим как просмотреть на симуляторе accessibility action
+    1. Запустить симулятор( Build ans run)
+    2. В меню Xcode-> Open developer tool -> Accessebility inspector
+    3. В Accessebility inspector выбрать inspection button и затем навести на первое напоминания в симуляторе
+    4. Проверить результат в accessibility inspector
+    
+# Displaying reminder details
+    Далее будут описаны шаги для создания view controller для того чтобы отображать детали каждого напоминания
+## Section 18: Create a reminder view
+    1. Создадаим файл ReminderViewController.swift, создадим в файле класс с таким же названием и наследованием от UICollectionViewController
+    2. Создадим свойство reminder чтобы было что отображать и менять данные в напоминании и создадим init для этого свойства
+    3. Добавим в инициализатор listConfiguration и далее уберём отображение разделителей в списке
+    4. Зададим layout 
+    5. Добавим super init
+    6. Чтобы убрать ошибку добавим required init
+    
     
     
