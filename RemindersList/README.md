@@ -158,5 +158,18 @@ Reminders app - приложение заметки на UIKit
     3. Добавим таргет к кнопке
     4. Build and run
     
-
+## Section 15: Update the snapshot
+    Когда в рпиложении используют diffable data source, то используют snapshot чтобы сделать update UI в приложении. 
+    В этой секции будем создавать и применять новый snapshot когда пользователь нажимает кнопку Done
+    
+    1. В файле ReminderListViewController+DataSource.swift создадим метод updateSnapshot()
+    2. Переместим код для обновления snapshot из метода viewDidLoad в этот метод
+    3. Сделаем вызов метода updateSnapshot() в методе viewDidLoad()
+    4. Так же сделаем вызов этого метода в completeReminder()
+    5. Добавим в updateSnapshot() аргумент ввиде массива id напоминаний
+    6. Если принятый массив содержит данные(не пустой), сделаем обновление данных в этом массиве
+    7. Так же скорректируем вызов updateSnapshot() в методе cpmpleteReminder()
+    
+## Section 16: Make the action accessible
+    
     
