@@ -197,5 +197,8 @@ Reminders app - приложение заметки на UIKit
     5. Добавим super init
     6. Чтобы убрать ошибку добавим required init
     
+## Section 19: Create an enumerations for rows
+    В этой секции будет сделана нумерация строк чтобы стилизовать каждую строку как требуется
+    
     
     
