@@ -199,6 +199,14 @@ Reminders app - приложение заметки на UIKit
     
 ## Section 19: Create an enumerations for rows
     В этой секции будет сделана нумерация строк чтобы стилизовать каждую строку как требуется
+    1. В папке Detail view contorller создадим файл ReminderViewController+Row.swift и создадим в этом файле extension
+    2. Создадим enum c протоколом hashable - соотвествие этому протоколу требуется при использовании diffable data source
+    3. Добавим case в enum
+    4. Добавим вычисляемое свойство imageName чтобы предоставить картинку для каждокого из case
+    5. Создадим переменнцю image которая будет создавать картинку по назвнию из imageName
+    6. Создадим вычисляемое свойство textstyle
+    8. В файле ReminderViewController.swift создадим метод text(for:)
+    
     
     
     
