@@ -207,6 +207,20 @@ Reminders app - приложение заметки на UIKit
     6. Создадим вычисляемое свойство textstyle
     8. В файле ReminderViewController.swift создадим метод text(for:)
     
+## Section 20: Setup data source
+    В этой секции будет создана конфигурация для ячеек detail view
+    1. В файле ReminderViewController.swift создадим typealias для DataSource для detail view. DataSource это дженерик и указывая параметры Int и Row мы указываем компиляторы что DataSource использует их.
+    2. Добавляем свойство dataSource 
+    3. Создаём метод cellRegistrationhandler который принимает cell indexPath и row
+    4. В этом методе создадим переменную contentConfiguration
+    5. Сдулаем конфигурацию текста и шрифта для каждой row
+    6. Добавим конфигурацию image
+    7. Применим созданную конфигурацию к ячейке
+    8. Зададим tintColor свойство для cell
+    9. Сделаем вызов viewDidLoad 
+    10. Сделаем cell registration
+    11. Зададим значение для dataSource
+    
     
     
     

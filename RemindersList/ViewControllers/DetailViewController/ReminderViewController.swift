@@ -9,7 +9,18 @@ import UIKit
 
 class ReminderViewController: UICollectionViewController {
     
+    private typealias DataSource = UICollectionViewDiffableDataSource<Int, Row>
+
     var reminder: Reminder
+    private var dataSource: DataSource?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let cellregistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
+        dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Row) in
+            return collectionView.dequeueConfiguredReusableCell(using: cellregistration, for: indexPath, item: itemIdentifier)
+        }
+    }
     
     init(reminder: Reminder) {
         self.reminder = reminder
@@ -20,6 +31,15 @@ class ReminderViewController: UICollectionViewController {
     }
     required init?(coder: NSCoder) {
         fatalError("Always initialize ReminderViewController using init(reminder:)")
+    }
+    
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, row: Row) {
+        var contentConfiguration = cell.defaultContentConfiguration()
+        contentConfiguration.text = text(for: row)
+        contentConfiguration.textProperties.font = UIFont.preferredFont(forTextStyle: row.textStyle)
+        contentConfiguration.image = row.image
+        cell.contentConfiguration = contentConfiguration
+        cell.tintColor = .todayPrimaryTint
     }
     
     func text(for row: Row) -> String? {
