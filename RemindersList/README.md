@@ -221,6 +221,15 @@ Reminders app - приложение заметки на UIKit
     10. Сделаем cell registration
     11. Зададим значение для dataSource
     
+## Section 21: Set up a snapshot
+    1. Сделаем typealias Snapshot, который так же дженерик и будет принимать Int и Row
+    2. Создадим метод updateSnapshot
+    3. Создадим новую переменную snapshot
+    4. Добавим к snapshot первую секцию
+    5. Добавим к snapshot сущности row
+    6. Применим этот snapshot к datasource
+    7. Сделаем вызов updateSnapshot во viewDidLoad
+    
     
     
     
