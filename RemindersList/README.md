@@ -230,6 +230,18 @@ Reminders app - приложение заметки на UIKit
     6. Применим этот snapshot к datasource
     7. Сделаем вызов updateSnapshot во viewDidLoad
     
+## Section 22: Display the detail view
+    В этой секции будет создан экземпляр detail view и в него будет добавлена зависимость соотвествоющего напоминания
+    1. В файле ReminderListViewControler.swift создадим метод pushDetailViewForReminder(with id:)
+    2. Создадим переменную в которой будет reminder с нужным id
+    3. Сделаем inject этого Reminder в ReminderViewController (DetailViewController)
+    4. Сделаем push контроллера в Navigation controller stack
+    5. Сделаем override для collection view так чтобы при нажатии на ячейку не происходило изменений в collection view и вместо этого отображался detail view
+    6. Получим id нужного напоминания из indexPath
+    7. Вызовем метод pushDetailViewForReminder
+    8. Добавим navigation controller в фале Main.storyboard
+    9. Запустим приложение и убедимся что всё работает
+    
     
     
     
