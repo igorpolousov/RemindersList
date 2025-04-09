@@ -242,6 +242,16 @@ Reminders app - приложение заметки на UIKit
     8. Добавим navigation controller в фале Main.storyboard
     9. Запустим приложение и убедимся что всё работает
     
+## Section 23: Style the navigation bar
+    В этой секции будет подвергнут модификации navigation bar таким образом, чтобы navigation bar соотвествовал общему стилю приложения
+    1. Открываем файл AppDelegate.swift и добавляем tint colour для navigation bar. Задание значения для данного свойства в методе application(didFifnishLounching: withOptions:) позволяет применить это значение ко всем navigation bar в приложении
+    2. Зададим navigation bar background colour
+    3. Созададим свойство navBarAppearance
+    4. Сделаем вызов метода для конфигурации background
+    5. Сделаем так чтобы при скролинге талицы, когда контент достигает nav bar, чтобы контент был поверх nav bar. по умолчанию nav bar над контентом
+    6. В файле ReminderViewController.swift зададим новое название для tiile 
+    7. Зададим стиль для nav bar = .navigator
+    8. Build and run
     
     
     

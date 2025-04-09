@@ -21,7 +21,8 @@ class ReminderViewController: UICollectionViewController {
         dataSource = DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Row) in
             return collectionView.dequeueConfiguredReusableCell(using: cellregistration, for: indexPath, item: itemIdentifier)
         }
-        
+        navigationItem.style = .navigator
+        navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
         updateSnapshot()
     }
     
