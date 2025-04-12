@@ -253,5 +253,22 @@ Reminders app - приложение заметки на UIKit
     7. Зададим стиль для nav bar = .navigator
     8. Build and run
     
+## Getting ready for editing
+    В этой части будет выполнен функционал по редактированию Напоминаний Reminder. Будет сделаны два варианта data source в для режима просмотра и для режима редактирования и будут добавлены кнопки при помощи которых будет происходить переключение между этими двумя режимами
+    
+##Section 24: Create section for an Editing mode
+    1. В папке DetailViewController создадим файл ReminderViewController+Section.swift Это будет расширение для ReminderViewController
+    2. Создадим enum для хранения номеров секций и подпишем их под hashable
+    3. Добавим в enum cases
+    4. Создадим вычисляемое свойство name, которое будет определять текст для названия каждой секции
+    5. В ReminderViewController.swift в typealias datatype и snapshot поменяем Int на Section
+    6. Метод updateSnapshot был расчитан на использование Int. Нужно его модифицировать чтобы убрать ошибку
+    7. Седалем метод который будет предоставлять секцию для строки(очень понятно))
+    8. Используем indexPath для получения номера секции
+    9. Используем номер секции для создания самой секции
+    
+    
+    
+    
     
     

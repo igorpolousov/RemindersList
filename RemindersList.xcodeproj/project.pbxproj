@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2378F632DAA690900D3D36D /* ReminderViewController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2378F622DAA690900D3D36D /* ReminderViewController+Section.swift */; };
 		C2BF6B7D2D8C848000A1F6F8 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF6B7C2D8C848000A1F6F8 /* ReminderViewController.swift */; };
 		C2BF6B9C2D901D9400A1F6F8 /* ReminderViewController+Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF6B9B2D901D9400A1F6F8 /* ReminderViewController+Row.swift */; };
 		C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DC7E6A2D75D6B20014D9E4 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C2378F622DAA690900D3D36D /* ReminderViewController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Section.swift"; sourceTree = "<group>"; };
 		C2BF6B7C2D8C848000A1F6F8 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		C2BF6B9B2D901D9400A1F6F8 /* ReminderViewController+Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+Row.swift"; sourceTree = "<group>"; };
 		C2DC7E522D75D6A00014D9E4 /* RemindersList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindersList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 			children = (
 				C2BF6B7C2D8C848000A1F6F8 /* ReminderViewController.swift */,
 				C2BF6B9B2D901D9400A1F6F8 /* ReminderViewController+Row.swift */,
+				C2378F622DAA690900D3D36D /* ReminderViewController+Section.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				C2DC7E742D75D6B20014D9E4 /* AppDelegate.swift in Sources */,
 				C2DC7E812D79C65C0014D9E4 /* Date+Today.swift in Sources */,
 				C2DC7E752D75D6B20014D9E4 /* SceneDelegate.swift in Sources */,
+				C2378F632DAA690900D3D36D /* ReminderViewController+Section.swift in Sources */,
 				C2DC7E762D75D6B20014D9E4 /* ReminderListViewController.swift in Sources */,
 				C2BF6B7D2D8C848000A1F6F8 /* ReminderViewController.swift in Sources */,
 				C2BF6B9C2D901D9400A1F6F8 /* ReminderViewController+Row.swift in Sources */,
