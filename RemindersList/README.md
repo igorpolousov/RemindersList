@@ -1,6 +1,22 @@
 #  Reminders List UIKit
 
 Reminders app - приложение заметки на UIKit
+Термины: 
+**typealias** - это ключевое слово в языке Swift предназанчено для переименования типов данных для создания более удобного для восприятия кода
+
+**CollectionDiffableDataSource**:
+Это объект для управления данными и предоставления cells для collection view, нужен для управления изменениями в данных для collection view и UI.
+
+@MainActor @preconcurrency
+class UICollectionViewDiffableDataSource<SectionIdentifierType, ItemIdentifierType> where SectionIdentifierType : Hashable, SectionIdentifierType : Sendable, ItemIdentifierType : Hashable, ItemIdentifierType : Sendable
+
+**DiffableDataSourceSnapshot**:
+Это представление состояния данных во view в определенный момент времени.
+
+@preconcurrency
+struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> where SectionIdentifierType : Hashable, SectionIdentifierType : Sendable, ItemIdentifierType : Hashable, ItemIdentifierType : Sendable
+
+
 
 ## Section 1 
 - creating project in Xcode
@@ -256,7 +272,7 @@ Reminders app - приложение заметки на UIKit
 ## Getting ready for editing
     В этой части будет выполнен функционал по редактированию Напоминаний Reminder. Будет сделаны два варианта data source в для режима просмотра и для режима редактирования и будут добавлены кнопки при помощи которых будет происходить переключение между этими двумя режимами
     
-##Section 24: Create section for an Editing mode
+## Section 24: Create section for an Editing mode
     1. В папке DetailViewController создадим файл ReminderViewController+Section.swift Это будет расширение для ReminderViewController
     2. Создадим enum для хранения номеров секций и подпишем их под hashable
     3. Добавим в enum cases
@@ -266,6 +282,19 @@ Reminders app - приложение заметки на UIKit
     7. Седалем метод который будет предоставлять секцию для строки(очень понятно))
     8. Используем indexPath для получения номера секции
     9. Используем номер секции для создания самой секции
+    
+ ## Section 25: Configure view and editing modes
+    ReminderViewController выполняет две функции: редактирование и отображение информации по напоминанию(Reminder). В этой секции создадим два Snapshot для просмотра и для редактирования и начнём делать конфигурацию ячеек для просмотра и для режима редактирования
+    1. Изменим название функции updateSnapshot -> updateSnapshotForViewing
+    2. Создадим функцию updateSnapshotForEditing
+    3. Добавим секции title date и notes
+    4. Применим snapshot к datasource
+    
+    Делаем рефактор для cell чтобы создать два режима: просмотр и редактирование
+    5. В cellRegistrationHandler добавим константу section
+    6. Добавим switch с использованием tuple. Использование tuple для switch позволяет использовать два компоненита в сочетании друг с другом
+    7. Сделаем конфигурацию для view mode
+    8. Переместим существующую конфигурацию ячейки в case view
     
     
     
