@@ -306,5 +306,19 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     3. В зависомости от того в какой режим будет переключаться view будем вызывать соотвествующий метод
     4. Сделаем B&R и проверим как работает кнопка
     
+## Section 27: Show header in editing mode
+    В этой секции будем менять ReminderViewController так, чтобы отображался header. В UIKit в collection views по умолчанию нет header. Можно сделать дополнительный массив с headers или можно использовать как header первый элемент массива 
+    1. В файле ReminderViewController+Row добавим case header с associated value String. В enum associated value conforms to hashable protocol
+    2. В файле ReminderViewController  в методе text(for:) добавим case по умолчанию который будет возвращать nil
+    3. В методе updateSnapshotForEditing() добавим header в каждую секцию
     
+    Collection view не включают header по умолчанию, сделаем изменения в collection view configuration чтобы включить headers
+    4. Добавим header mode в инициализатор ReminderViewController
+    5. В методе updateSnapshotForViewing() добавим пустой header как первый элемент snapshot
     
+    Следующим шагом сделаем конфигурацию header cells
+    6. В cellRegistrationHandler() добавим case который будет соответсвовать header row и который будет хранить assosiated value String для header row в константе под названием title. Этот case задаёт title для каждой секции
+    7. Получим конфигурацию ячейки по умолчанию и сохраним её значение в переменную
+    8. Присвоим значение к свойству text
+    9. Зададим новое значение конфигурации для cell
+    10. B&R и проверим, что при в ходе в режим редактирования отображаются названия секций
