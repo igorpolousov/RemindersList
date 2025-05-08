@@ -322,3 +322,18 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Присвоим значение к свойству text
     9. Зададим новое значение конфигурации для cell
     10. B&R и проверим, что при в ходе в режим редактирования отображаются названия секций
+    
+    # Managing content views
+    Content view позволяют вам сосредоточиться на информации, которую вы хотите отобразить во view, не беспокоясь о том, когда обновлять или как оформить view. Они работают с конфигурациями content, чтобы синхронизировать информацию о вашем приложении и пользовательский интерфейс.
+## Section 28: Extract configuration methods
+    Чем больше добавляем ячеек к пользовательскому интерфейсу, тем более громоздким он становится. В этой секции перенесем конфигурации ячеек в отдельный файл.
+    1. В папке DetailViewController создадим файл ReminderViewController+CellConfiguration.swift и сделаем в нём extension для  ReminderViewController 
+    2. Создадим функцию default configuration
+    3. Переместим содержимое .view case из файла ReminderViewController за исключением cell.contentConfiguration
+    4. Сделаем return для content configuration
+    5. В файле ReminderViewController при помощи метода defaultConfiguration зададим значение для cell.contentConfiguration
+    Далее будет перенесён код для header view
+    6. Создадим headerConfiguration
+    7. Переместим содержимое .header case в новый метод, за исключением cell.contentConfiguration и выполним действия аналогичные пунктам 4 и 5
+    8. Перемести в этот файл функцию text(for:)
+    9. Проверим что всё работает и коммит
