@@ -23,7 +23,18 @@ class ReminderViewController: UICollectionViewController {
         }
         navigationItem.style = .navigator
         navigationItem.title = NSLocalizedString("Reminder", comment: "Reminder view controller title")
+        navigationItem.rightBarButtonItem = editButtonItem // используя такое свойство при нажатии на кнопку будет производиться автоматическое переключение названия кнопки edit and done
+        
         updateSnapshotForViewing()
+    }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing {
+            updateSnapshotForEditing()
+        } else {
+            updateSnapshotForViewing()
+        }
     }
     
     init(reminder: Reminder) {

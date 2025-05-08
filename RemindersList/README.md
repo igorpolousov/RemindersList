@@ -296,8 +296,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. Сделаем конфигурацию для view mode
     8. Переместим существующую конфигурацию ячейки в case view
     
+## Section 26: Add an edit button
+    В этой секции будет добавлена кнопка для reminder view controller для входа и выхода из режима редактирования. Будем делать snapshot update когда view будет делать переход между двумя режимами.
     
+    Подклассы UIViewController имеют свойство editButtonItem которое будем использовать для преклюяения между режимами
     
+    1. В файле ReminderViewController Во viewDidLoad() добавим это совйство для правой кнопки navigationItem
+    2. Система вызовет метод setEditing() сделаем override этого метода
+    3. В зависомости от того в какой режим будет переключаться view будем вызывать соотвествующий метод
+    4. Сделаем B&R и проверим как работает кнопка
     
     
     
