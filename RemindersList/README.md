@@ -337,3 +337,22 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. Переместим содержимое .header case в новый метод, за исключением cell.contentConfiguration и выполним действия аналогичные пунктам 4 и 5
     8. Перемести в этот файл функцию text(for:)
     9. Проверим что всё работает и коммит
+    
+## Section 29: Create reusable layout function
+    Используя date picker, text field, и text view пользователь сможет изменять детали напоминания в режиме редактирования. Прикрепим эти subview к их superview по четырём сторонам: top, trailing, bottom, leading таким образом чтобы получились изменяемые отступы в каждом направлении
+    1. В панели  project navigatior создадим новую папку ContentViews
+    2. В этой папке создадим файл UIView+PinnedSubview и создадим в нём extension для UIView
+    
+    Поскольку эти subview имеют одинаковое положение, создадим функцию для их прикрепления к superview 
+    3. Добавим Subview при помощи встроенного метода 
+    Система автоматически генерирует constraints на основе текущего размера и положения view. Но эти ограничения не позволяют view адаптироваться.
+    4. Выставим TAMIC to false чтобы система автоматически не проставляля constraints
+    Синтаксис constraints UIKit позволяет вам определить и активировать constraints за один шаг, установив свойству isActive нового constarint значение true.
+    5. Прикрепим subview к вернему краю superview
+    6. Таким же образом установим и для остальных сторон
+    7. Если при вызове функции будет задан параметр height, то зададим constrint для данного параметра
+    
+## Section 30: Create a custom view with text field
+    
+    
+    
