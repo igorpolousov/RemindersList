@@ -372,4 +372,6 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. Делаем вызов addPinnedSubview и указываем отступы для textField
     8. Для text field установим для свойства clearButtonMode значение .whileEditing. Это свойство указывает когда будет показываться значок удаления текста ввода на хвосте text field 
     
+## Section 31: Conform to content view protocol
+    
     
