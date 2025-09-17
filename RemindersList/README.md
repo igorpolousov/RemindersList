@@ -359,6 +359,17 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     Чтобы использовать стили и конфигурации кастомных подклассов UIView они будут соотвествовать протоколу UIContentView protocol
     В этой секции будет создан один из элементов управления в котором будет отображиться title. Это будет custom text field
     
-    1. В папке ContentViews создадим файл TextFieldContentView.swift
+    1. В папке ContentViews создадим файл TextFieldContentView.swift + import UIKit
+    2. Создадим класс с таким же именем и унаследуем от UIView
+    3. Добавим константу textField, которой будет присвоено UITextField
+    
+    Система присваивает каждому подклассу UIView свой размер содержимого — ширину и высоту, определяемые тем, что он отображает. Например, размер содержимого Label зависит от размера отображаемого текста.
+    4. Сделаем override для intrinsic content size чтобы установить высоту равной 44. Установка кастомных значений позоволяет нашего view передвать предпочтительные занчения для system layout
+    Далее добавляем text field subview и инициализируем его свойства при создании custom view
+    5. Создадим init без аргументов и добавим required init (coder:). Иннициализатор выдаст ошибку, которая будет исправлена в шаге 6
+    6. Для начала иниуиализируем view без размера и далее будем управлять финальным расположением при помощи constraints
+    Вызываем super.init(frame:) с размером .zero
+    7. Делаем вызов addPinnedSubview и указываем отступы для textField
+    8. Для text field установим для свойства clearButtonMode значение .whileEditing. Это свойство указывает когда будет показываться значок удаления текста ввода на хвосте text field 
     
     
