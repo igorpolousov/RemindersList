@@ -386,3 +386,17 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Добавим необходимую функцию makeContentView - необходима для соотвествия протоколу
     9. Добавим в функцию TextFieldContentView(self)
     
+## Section 32: Complete the content view
+    Content configuration помогает держать интерфейс пользователя в синхронизации с состоянием приложения. в этой секции мы убедимся что UI и app state находятся в синхронизации и UI делает изменения при когда происходят изменения в приложении.
+    
+    Так же расширим ReminderViewController+CellConfiguration.swift и включим в него функцию которая возвращает text field configuration
+    1. Создадим func configure(configuration: UIContentConfiguration)
+    2. Сделаем проверку, что конфигурация соотвествует TextFieldContentView.Configuration
+    3. Обновим данные text textField из конфигурации 
+    4. Добавим didSet observer чтобы вызывать configure при необходимости
+    
+    Далее расширим поведение UICollectionViewListCell чтобы возвращать кастомную конфигурацию которая будет синхронизированна TextFieldContentView
+    5. Добавим расширение для UICollectionViewListCell
+    6. Создадим новую функцию textFieldConfiguration() которая будет возращать новое значение TextFieldContentView.Configuration
+    7. В файле ReminderListController+CellConfiguration.swift добавим функцию titleConfiguraton(for: with:) которая принимает cell и title и возвращает TextFieldContentView.Configuration
+    8. Создадаим конфигурацию с использованием title
