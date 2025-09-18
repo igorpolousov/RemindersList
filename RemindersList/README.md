@@ -411,3 +411,14 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     3. В cellRegistrationHandler(cell:indexPath:row:), добавляем новый  case for (.title, .editableText(let title))
     4. Добавим конйигурацию к ячейке
     5. Build and run
+    
+## Section 34: Create content views for the date and notes
+    В этой секции, по аналогии с предыдущей, создадим возможность редактировать дату при помощи date picker и заметки при помощи text view
+    Начнем с добавления text view для редактирования заметок.
+    1. Впапке ContentViews создадим файл TextViewContentView.swift import UIKit и подпишем под UIView и протокол UIContenView
+    2. Далее в инструкции на сайте предлагается пройти и сделать те же шаги что и для Text field view
+    3. Добавим TextViewContentView как subview и зададим его размеры. Хотя заданы размеры view, text view обладает встроенными свойствами scroll view и поэтому пользователь сможет добавить больше текста чем может поместиться в размерах view на экране
+    4. Сделаем background color nil - чтобы фон был прозарчным
+    5. Изменим шрифт на .body
+    Date picker
+    6. Далее создадим файл DatePickerCOntentView.swift с такими же свойствами что и предыдущие два файла
