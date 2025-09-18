@@ -400,3 +400,14 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     6. Создадим новую функцию textFieldConfiguration() которая будет возращать новое значение TextFieldContentView.Configuration
     7. В файле ReminderListController+CellConfiguration.swift добавим функцию titleConfiguraton(for: with:) которая принимает cell и title и возвращает TextFieldContentView.Configuration
     8. Создадаим конфигурацию с использованием title
+    
+## Section 33: Display the content view 
+    В этой секции добавим редактируемый text field для изменения reminder title 
+    Сперва добавим редактируемый случай(editable case) для row и для edit title cell item чтобы редактировать snapshot
+    Затем зададим конфигурацию edit title cell при помощи кода созданного в секциях 30-32 
+    В конце протестируем работоспособность в приложении
+    1. В файле ReminderViewController+Row.swift добавим новый case с именем editableText cо значением String (Associated value String)
+    2. В фале ReminderViewController.swift добавим editableText в snapshot.appendItems
+    3. В cellRegistrationHandler(cell:indexPath:row:), добавляем новый  case for (.title, .editableText(let title))
+    4. Добавим конйигурацию к ячейке
+    5. Build and run
