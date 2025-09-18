@@ -5,4 +5,12 @@
 //  Created by Igor Polousov on 18.09.2025.
 //
 
-import Foundation
+import UIKit
+
+extension UIContentConfiguration {
+    
+   func updated(for state: UIConfigurationState) -> Self {
+        return self
+    }
+    
+}

@@ -373,5 +373,16 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Для text field установим для свойства clearButtonMode значение .whileEditing. Это свойство указывает когда будет показываться значок удаления текста ввода на хвосте text field 
     
 ## Section 31: Conform to content view protocol
-    
+    У объекта, который соотвествует UIContentView должено быть свойство конфигурации с типом UIContentConfiguration, котрое будет добавлено в этой секции.
+    Конфигурация, которая будет использоваться в ячейке с text field имеет свойство text, которое содержит значение введёнгное пользователем в textField. В этой секции так же будет создано свойство UIConntentConfiguration.
+    UIContentConfiguration protocol требует выполнения двух методов makeContentView() и updated(for:). В этой секции так же будут созданы эти два метода
+    1. В папке ContentViews создадим файл UIContentConfiguration+Stateless.swift в котором будет import UIKit и extension UIContentConfiguration
+    2. Добавляем функцию updated(for:) которая будет возвращать self. метод updated(for:) позволяет UIContentConfiguration предоставлять специализированную конфигурацию для каждого state. В этом приложении используется одна и таже конфигурация для любого из состояний: normal highlighted selected
+    3. В файле TextFieldContentView.swift добавим соотвествие протоколу UIContentView. Добавление этого протокола сгнализирует, что это view будет делеать рендеринг контента и применять стили при помощи ранее заданной конфигурации.
+    4. Добавляем свойство для конфигурации котента.
+    5. Добавим конфигурацию в принимаемое значение инициализатора
+    6. Создадим struct которая будет соотвествовать протоколу UIContentConfiguration. TextFieldContentView.configuraton - будет использоваться чтобы задать параметры контента и view
+    7. Создаим  свойство с опциональным типом string и начальным значением : пустая строка
+    8. Добавим необходимую функцию makeContentView - необходима для соотвествия протоколу
+    9. Добавим в функцию TextFieldContentView(self)
     
