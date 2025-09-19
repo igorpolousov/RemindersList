@@ -30,6 +30,18 @@ extension ReminderViewController {
             return contentConfiguration
     }
     
+    func dateConfiguration(for cell: UICollectionViewListCell, with date: Date) -> DatePickerContentView.Configuration {
+        var contentConfiguration = cell.datePickerConfiguration()
+        contentConfiguration.date = date
+        return contentConfiguration
+    }
+    
+    func notesConfiguration( for cell: UICollectionViewListCell, with notes: String?) -> TextViewContentView.Configuration {
+        var contentConfiguration = TextViewContentView.Configuration()
+        contentConfiguration.text = notes
+        return contentConfiguration
+    }
+    
     func text(for row: Row) -> String? {
         switch row {
         case .date: return reminder.dueDate.dayText

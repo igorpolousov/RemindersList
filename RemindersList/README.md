@@ -422,3 +422,12 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     5. Изменим шрифт на .body
     Date picker
     6. Далее создадим файл DatePickerCOntentView.swift с такими же свойствами что и предыдущие два файла
+    7. Делаем необходимые действия в файле как в предыдущих двух view
+    8. Добавим(установим) стиль отображаемого date picker
+    
+    Для того, чтобы завершить создание editing mode надо добавить новый тип строки: editableDate и затем сконфигурировать ячейку
+    9. В файл ReminderViewController+Row.swift добавим case
+    10. В файле ReminderViewController+CellConfiguration.swift добавим две функции для конфигурации даты и заметок
+    11. Добавим эти строки в snapshot
+    12. Добавим эти ячейки в cell registration handler
+    13. B&R проверим как добавились новые ячейки
