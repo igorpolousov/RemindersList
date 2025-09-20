@@ -13,6 +13,7 @@ class ReminderViewController: UICollectionViewController {
     private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Row>
 
     var reminder: Reminder
+    var workingreminder: Reminder
     private var dataSource: DataSource?
     
     override func viewDidLoad() {
@@ -31,14 +32,15 @@ class ReminderViewController: UICollectionViewController {
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
         if editing {
-            updateSnapshotForEditing()
+            prepareForEditing()
         } else {
-            updateSnapshotForViewing()
+            prepareForViewing()
         }
     }
     
     init(reminder: Reminder) {
         self.reminder = reminder
+        self.workingreminder = reminder
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         listConfiguration.showsSeparators = false
         listConfiguration.headerMode = .firstItemInSection
@@ -74,11 +76,22 @@ class ReminderViewController: UICollectionViewController {
        
     }
     
+    private func prepareForViewing() {
+        if workingreminder != reminder {
+            reminder = workingreminder
+        }
+        updateSnapshotForViewing()
+    }
+    
     func updateSnapshotForViewing() {
         var snapshot = Snapshot()
         snapshot.appendSections([.view])
         snapshot.appendItems([Row.header(""), Row.title, Row.date, Row.time, Row.notes], toSection: .view)
         dataSource?.apply(snapshot)
+        
+    }
+    
+    private func prepareForEditing() {
         
     }
     
