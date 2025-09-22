@@ -448,3 +448,18 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     Если пользователь будет делать изменения в workingReminder в режиме редактирования, то будем копировать его значение в reminder, которое отображается в остальных view
     6. В prepareForViewing сделаем reminder update 
     7. Появится ошибка, поскольку для Reminder не были указаны признаки по которым надо сравнивать два объекта, исправим это. В файле Reminder.swift добавим соотвествие протоколу Equatable
+    
+## Section 36: Make the text configuration editable
+    В этой секции настроим text field для редактирования reminder title, определим метод, который будет выполняться каждый раз как в text field будут сделаны изменения. Так же убедимся, что detail view тоже отображает все изменения, которые сделаны в text field после выхода из режима редактирования.
+    1. !!! В файле TextFieldContentView.swift в struct Configuration добавим onChange метод без каких либо действий по умолчанию. Это пустое замыкание содержит поведение, которое мы бы хотели выполнить в момент когда пользователь редактирует text field  или text view
+    2. Добавим @objc func с названием didChange
+        Мы хотим убедиться, что Configuration вызывает обработчик OnChange
+    3. Используем guard чтобы опционально обернуть свойство configuration в константу 
+    4. Вызываем onChange обработчик и передаём в него содержимое text field или если значение равно nil передадим пустую строку
+    5. Подключим этот метод к text filed, в init установим target и action для события .editingChanged 
+    Добавляя target и action к этому view при помощи метода didChange selctor при распозновании действий пользователя будет каждый раз вызывать этот метод.
+    Можно вызывать этот метод в разные моменты взаимодействия пользователя: когда пользователь коснулся в первый раз, когда пользователь начал редактирвать, когда закончил редактировать или еще как-то взаимодействует с полем
+    Чтобы убедиться, что свойство working reminder всегда имеет значение равное последним действиям пользователя, сделаем update title и time для working reminder 
+    6. В файле ReminderViewController+CellConfiguration.swift в методе titleConfiguration добавим onChange обработчик который добавит новое значение title для workingReminder
+    7. B&R и проверим как работает изменение в title 
+    

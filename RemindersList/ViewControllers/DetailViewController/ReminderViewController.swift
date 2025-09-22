@@ -13,7 +13,7 @@ class ReminderViewController: UICollectionViewController {
     private typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Row>
 
     var reminder: Reminder
-    var workingreminder: Reminder
+    var workingReminder: Reminder
     private var dataSource: DataSource?
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class ReminderViewController: UICollectionViewController {
     
     init(reminder: Reminder) {
         self.reminder = reminder
-        self.workingreminder = reminder
+        self.workingReminder = reminder
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .insetGrouped)
         listConfiguration.showsSeparators = false
         listConfiguration.headerMode = .firstItemInSection
@@ -77,8 +77,8 @@ class ReminderViewController: UICollectionViewController {
     }
     
     private func prepareForViewing() {
-        if workingreminder != reminder {
-            reminder = workingreminder
+        if workingReminder != reminder {
+            reminder = workingReminder
         }
         updateSnapshotForViewing()
     }
@@ -92,7 +92,7 @@ class ReminderViewController: UICollectionViewController {
     }
     
     private func prepareForEditing() {
-        
+        updateSnapshotForEditing()
     }
     
     func updateSnapshotForEditing() {
