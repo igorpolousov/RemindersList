@@ -473,4 +473,13 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     6. В файле ReminderViewController+CellConfiguration.swift в функции Configuration добавим onChange обработчик который будет передавать дату и время в working reminder
     7. B&R и проверим как это работает
     
-    
+## Section 38: Make the notes configuration editable
+    В этой секции сделаем text view редактируемым и чтобы данные сохранялись. Выполняться будет через вспомогательный объект - delegate
+    1. В классе TextViewContentView в struct Configuration добавим onChange
+    2. Создадим расширение для класса TextViewContentView и подпишем его под UITextViewDelegate
+    3. Добавим метод textViewDidChange. Text view dlegate будет вызывать его при каждом взаимодействии пользователя с text view. Два других распространенных метода textViewDidBeginEditing и textViewDidFinishEditing
+    4. Убедимся, что configuration as textView configuration
+    5. Вызовем метод onChange и передадим в него значение textView.text
+    6. В инициализатор добавим textView delegate as self, таким образом textView этого класса будет delegate для textView control и будет получать данные при изменении пользователем
+    6. В файле ReminderViewController+CellConfiguration.swift сделаем вызов onChange
+    7. B&R и проверим как работает
