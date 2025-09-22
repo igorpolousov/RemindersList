@@ -463,3 +463,14 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     6. В файле ReminderViewController+CellConfiguration.swift в методе titleConfiguration добавим onChange обработчик который добавит новое значение title для workingReminder
     7. B&R и проверим как работает изменение в title 
     
+## Section 37: Make date configuration editable
+    В этой секции сделаем изменения в дате и времени при помощи  date picker. Зададим метод, который будет отслеживать изменния в дате и времени в date picker и убедимся, что detail view отображает изменения, при выходе пользователя из режима редактоирования.
+    1. В классе DatePickerContentView в struct Configuration добавим обработчик onChange 
+    2. Добавим функцию, которая будет сохранять каждое изменение
+    3. При помощи guard привяжем свойство Configuration к константе
+    4. Сделаем вызов onChange и передадим в него новую дату
+    5. В инициализаторе зададим terget и action для события .valueChanged
+    6. В файле ReminderViewController+CellConfiguration.swift в функции Configuration добавим onChange обработчик который будет передавать дату и время в working reminder
+    7. B&R и проверим как это работает
+    
+    
