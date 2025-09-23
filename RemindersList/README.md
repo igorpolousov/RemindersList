@@ -483,3 +483,13 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     6. В инициализатор добавим textView delegate as self, таким образом textView этого класса будет delegate для textView control и будет получать данные при изменении пользователем
     6. В файле ReminderViewController+CellConfiguration.swift сделаем вызов onChange
     7. B&R и проверим как работает
+    
+## Section 39: Cancel edits
+    В этой секции будет добавлена кнопка Cancel в режим редактирования, которая позволит пользователю выйти из режима редактирования без сохранения изменений
+    1. В файле ReminderViewController.swift добавим @objc метод didCancelEdit 
+    Если пользхователь будет выбирать cancel, сделаем сброс working reminder к начальному состоянию
+    2. Присвоим значение reminder к working reminder
+    3. Метод setEditing переключает кнопку в навигации между edit и done. Передадим в этот метод false, таким образом Done будет изменено на Edit снова
+    4. В методе prepareForEditing зададим  cancel для left navigation bar button
+    5. В методе prepareForViewing уберем левую кнопку для navigation bar
+    6. B&R и проверим работу кнопки cancel
