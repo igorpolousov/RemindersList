@@ -493,3 +493,25 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     4. В методе prepareForEditing зададим  cancel для left navigation bar button
     5. В методе prepareForViewing уберем левую кнопку для navigation bar
     6. B&R и проверим работу кнопки cancel
+    
+    # Adding and deleting reminders
+    
+## Section 40: Create an add action
+    В режиме редактирования у пользователя есть возможность редактировать детали reminder. В этом же месте добавим возможность добавлять reminder. Начнём с добавления свойства  addingNewRemninder к ReminderViewController. Долее создадим метод, который будет отображать ReminderViewController в модальном view, Которое будет накрывать list view когда пользователь создает новый reminder. Так же обернем ReminderViewController в Navigation Controller, чтобы было можно добавить cancel и done кнопки.
+    1. В файле ReminderViewController.swift добавим свойство isAddingNewReminder и установим начальное значение на false
+    
+    Когда пользователь создает новый reminder, будем добавлять его к data source, когда view будет покидать режим редактирования
+    
+    2. Изменим метод setEditing и если isAddingNewReminder будет иметь значение true, будем делать вызов onChange
+    3. В файле ReminderListViewController+Actions добавим didCancelAdd, ,будет использоваться для создания кнопки cancel
+    4. Добавим метод didPressAddButton
+    5. Создадим новый reminder с пустым title, date, time
+    6. Создадим reminder view controller
+    7. Значение свойства isAddingNewReminder сделаем true
+    8. Сделаем setEditing со значением true
+    9. Добавим кнопку cancel слева
+    10. Добавим title для view controller
+    11. Создадим navigation controller в коором root controller будет наш view controller
+    
+    Далее сделаем, чтобы nav controller отображался как модальное view над list view
+    12. Вызовем метод present
