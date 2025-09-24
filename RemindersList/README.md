@@ -515,3 +515,11 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     
     Далее сделаем, чтобы nav controller отображался как модальное view над list view
     12. Вызовем метод present
+    
+## Section 41: Connect the target-action pair
+    В этой секции добавим navigation bar кнопку и подключим к ней метод didPressAddButton
+    1. Файле RemainderListViewController.swift в методе viewDidLoad создадим константу UIBarButtonItem 
+    2. Добавим к кнопке accessibility label
+    3. Назначим кнопку для nav bar right button
+    4. Установим стиль .navigator для кнопки 
+    5. B&R и смотрим как работает появление view по кнопке
