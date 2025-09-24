@@ -523,3 +523,12 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     3. Назначим кнопку для nav bar right button
     4. Установим стиль .navigator для кнопки 
     5. B&R и смотрим как работает появление view по кнопке
+    
+## Section 42: Add a new reminder to the model
+    В этой секции завершим выполение функционала для кнопки add reminder
+    1. В файле ReminderListViewController+DataSource.swift создадим метод addReminder, который будет добавлять reminder к массиву reminders. Этот метод будет использоваться, когда пользователь нажмет кнопку done при добавлении reminder
+    2. В файле ReminderListViewController+Actions.swift добавим в замыкание addReminder
+    3. Сделаем выхов updateSnapshot
+    4. Уберем view controller
+    5. B&R убедимся, что новый reminder добавляется в список по нажатию кнопки
+    
