@@ -532,3 +532,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     4. Уберем view controller
     5. B&R убедимся, что новый reminder добавляется в список по нажатию кнопки
     
+## Section 43: Delete reminder
+    В этой секции будет добавлен swipe-to-delete функционал 
+    1. В файле ReminderListViewController+DataSource.swift создадим метод deleteReminder withID
+    2. В файле ReminderListViewController.swift создадим makeSwipeActions for, который будет принимать IndexPath и возвращать опциональный UISwipeActionsConfiguration
+    3. Получим identifier из data source
+    4. Создадим title для delete action
+    5. Создадим UIContextualAction и зададим .destructive стиль, потому что будем удалять reminder
+    6. Удалим reminder с нужным id
+    7. Update snapshot и вызовем completion handler
+    8. Вернём UISwipeActionsConfiguration
+    9. В listLayout зададим make swipe actions
+    10. B&R проверим как удаляет по свайпу
