@@ -680,4 +680,18 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Задаим цвета для слоя
     9. Зададим farme для слоя
     10. return layer
+
+## Section 54: Add gradient layer to list
+    Добавим ghradient layer как sublayer к list background view
+    Сделаем функцию, которая создаст backgrounelayer
+    1. В фале ReminderListViewController.swift создадим функцию refreshBackground
+    2. Зададим nil для background view
+    3. Создадим свойство backgroundView
+    4. Создадим константу gradientLayer
+    5. Добавим sublayer
+    6. Добавим background view
+    Чтобы отображать background нужно обновлять его во view life cycle
+    7. В фалйе ReminderListViewController+Actions.swift в методе didChangeListStyle сделаем вызов refreshBackground
+    8. B&R и проверим работу
+    
     

@@ -32,6 +32,11 @@ class ReminderListViewController: UICollectionViewController {
         }
         return progress
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshBackground()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +83,14 @@ class ReminderListViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
         guard elementKind == ProgressHeaderView.elementKind, let progresView = view as? ProgressHeaderView else {return}
         progresView.progress = progress
+    }
+    
+    func refreshBackground() {
+        collectionView.backgroundView = nil
+        let backgroundView = UIView()
+        let gradientLayer = CAGradientLayer.gradientLayer(for: listStyle, in: collectionView.frame)
+        backgroundView.layer.addSublayer(gradientLayer)
+        collectionView.backgroundView = backgroundView
     }
     
     func pushDetailViewForReminder(with id: Reminder.ID) {
