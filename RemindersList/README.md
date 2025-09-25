@@ -601,3 +601,22 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Сделаем container view 85% от размера progress view
     9. Добавим constraints для upper view и lowerView по вертикали
     10. Добавим constraints по горизонтали
+    
+## Section 49: Customize the appearance of progress circle
+    В этой секции добавим дизайн к pregress view
+    1. Создадим свойство heightConstraint
+    2. Зададим значение для heightConstraint
+    
+    Высота нижнего view будет меняться, высота верхнего view будет меняться противоположно пропорционально высоте нижнего view
+    
+    3. Добавим background color ко всем view
+    4. Сделаем override init, чтобы при инициализации можно было изменить параметры
+    5. Вызовем prepareSubviews
+    6. Сделаем required init
+    7. Добавим obsrver для свойства progress
+    8. Добавим анимацию при изменении высоты lower view
+    
+    Округлость для view будет задаваться через coener radius
+    9. Сделаем override layoutSubviews
+    10. Сделаем enable MaskToBounds для слоя container view и зададим значение corner radius
+    
