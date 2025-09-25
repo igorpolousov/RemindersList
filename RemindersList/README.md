@@ -620,3 +620,21 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     9. Сделаем override layoutSubviews
     10. Сделаем enable MaskToBounds для слоя container view и зададим значение corner radius
     
+## Section 50: Display header view
+    В этой секции добавим progress view к header view в reminders list
+    
+    Начнем с задания дополнительного view как header view
+    1. Добавим статичное свойство elementKind
+    
+    elementKind определяет тип дополнительного view котрое colletion view может показать
+    2. В файле ReminderListViewController.swift добавим свойство headerView с типом ProgressHeaderView
+    
+    Следующим шагом зарегистрируем дополнительное view
+    3. Внизу файла сделаем функцию supplementaryRegistrationHandler
+    
+    4. Во viewDidLoad зарегистрируем дополнительное view
+    5. Далее добавим регистрацию в метод supplementaryViewProvider
+    6. В методе listLayout изменим header на .supplementary
+    7. B&R проверим работу
+    8. Во viewDidLoad добавим backghroundColor к collection view
+    
