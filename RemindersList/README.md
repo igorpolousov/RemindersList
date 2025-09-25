@@ -590,3 +590,14 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
 ## Section 48: Create relational constraints
     Progress view состоит из нескольких subview: view, которое показывает проыент выполненных задач, view, которое показывает процент не выполненных задач и container view, который определяет расположение остальных view. В этой секции сделаем container view и subview. Затем определим из положения, высоту и ширину
     1. В папке ListViewController создадим файл ProgressHeaderView.swift import UIKit и унаследуем свойства UICollectionReusableView
+    Вместо удаления view, когда пользователь прокручивает их за пределы видимых границ, класс UICollectionReusableView сохраняет view в очереди повторного использования. Вы можете использовать UICollectionReusableView для создания дополнительных view. Дополнительные view находятся отдельно от отдельных collection view cells, поэтому они идеально подходят для создания header и footer.
+    2. Создадим свойство progress с типом данных CGFloat и занчением равным 0
+    3. Создадим 3 view c размером frame .zero
+     Перед использованием view их нужно поместить во view hierarchy
+    4. Создадим функцию prepareSubviews
+    5. Сделаем disable для tamic каждого view чтобы можно было задать constraints
+    6. Зададим fixed aspect ratio 1:1 для subview и superview
+    7. Отцентруем conteiner view по x и y
+    8. Сделаем container view 85% от размера progress view
+    9. Добавим constraints для upper view и lowerView по вертикали
+    10. Добавим constraints по горизонтали
