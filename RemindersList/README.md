@@ -576,3 +576,17 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     4. Присвоим значение list style segmented control к navigationItem.titleView
     5. B&R и проверим что segmented control появился 
     
+## Section 47: Add action to segmented control
+    Завершим код, чтобы пользователь при переключении segmented control получал разные данные на list view
+    1. В файле ReminderListViewController+Actions.swift создадим новую функцию didChangeListStyle c @objc атрибутом
+    2. Зададим новое значение для свойства listStyle с использованием selctedSegmentIndex
+    3. updateSnapshot
+    4. В файле ReminderListViewController.swift in viewDidLoad добавим target и action к segmented control
+    5. B&R и проверим работоспособность
+    
+# Creating a progress view
+    Создадим progress view которое будет отображать процент выполненых заданий 
+    
+## Section 48: Create relational constraints
+    Progress view состоит из нескольких subview: view, которое показывает проыент выполненных задач, view, которое показывает процент не выполненных задач и container view, который определяет расположение остальных view. В этой секции сделаем container view и subview. Затем определим из положения, высоту и ширину
+    1. В папке ListViewController создадим файл ProgressHeaderView.swift import UIKit и унаследуем свойства UICollectionReusableView
