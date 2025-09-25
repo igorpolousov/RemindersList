@@ -556,3 +556,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     ReminderListViewController будет отображать только reminders которые будут соотвествовать выбранной пользователям категории
     4. Добавим булевую константу isInToday
     5. Сделаем switch 
+    
+## Section 45: Filter reminder by list style
+    Чтобы пользователи могли более просто найти нужный reminder реализуем фильрацию collecton view используя enum. Будем использовать функции более высокого порядка, которые будут принимать параметры замыкания, чтобы кастомизировать их поведение.(Что значит последнее предложение не понятно)
+    1. В файле ReminderListViewController.swift создадим переменную listStyle со значением .today
+    2. Создадим вычисляемое свойство filteredReminders
+    3. Отсортируем полученные элементы
+    4. В методе collectionView поменяем reminders на filteredReminders
+    5. В файле ReminderListViewController+DataSource.swift изменим updateSnapshot чтобы изменить массив reminders в массив indentifiers
+    6. B&R и проверим, что приложение отображает только reminders  с текущей датой
+    7. В методе updateSnapshot поменяем название с ids на idsThatChanged
+    8. Отфильтруем idsThatChanged, чтобы в массив попадали только нужные reminders
+    
