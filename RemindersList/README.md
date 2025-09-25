@@ -652,3 +652,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     9. С помощью guard проверим что element kind это progress view
     10. Сделаем Update свойства progress 
     11. B&R и проверим работу
+    
+## Section 52: Make progress view accessable
+    В этой секции сделаем наше view доступным для assistive technologies
+    
+    1. В файле ProgressHeaderView.swift добавим свойство valueFormat
+    
+    Чтобы убедиться что progress view и progress всегда синхронизированны будем делать update для progressView каждый раз как меняется свойство progress
+    2. В наблюдателе свойства progress добавим setNeedsLayout
+    3. В layoutSubviews зададим новое значение для accessibility value
+    4. Добавим true для accessibility element в init
+    5. Добавми accesibility label
+    6. Установим accessibility value traits
