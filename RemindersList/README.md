@@ -664,3 +664,20 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     4. Добавим true для accessibility element в init
     5. Добавми accesibility label
     6. Установим accessibility value traits
+    
+# Creating gradient background
+    
+## Section 53: Create gradient layer
+    В этой секции добавим gradient layer при помощи добавления фнукции, которая будет устанвливать цвет градиента в зависимостти от того какой segmented control выбрал пользователь
+    UIKit предоставляет CAGradientLayer класс чтобы отображать градиенты
+    1. В папке Models создадим файл CAGradientLayer+ListStyle.swift 
+    2. Создадим функцию с цветами
+    3. Зададим константы beginColor и endColor
+    4. Сделаем switch для параметров style
+    5. Вернём массив с цветами
+    6. Зададим static func gradientLayer
+    7. Зададим слой
+    8. Задаим цвета для слоя
+    9. Зададим farme для слоя
+    10. return layer
+    
