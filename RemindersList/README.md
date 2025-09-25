@@ -568,3 +568,11 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. В методе updateSnapshot поменяем название с ids на idsThatChanged
     8. Отфильтруем idsThatChanged, чтобы в массив попадали только нужные reminders
     
+## Section 46: Display segmented control
+    Чтобы пользователь мог выбрать отображение не только reminders за текущую дату, но за другие, добавим segmented control
+    1. В файле ReminderListStile.swift добавим вычисляемое свойство name которое возвращает имя каждого стиля
+    2. В файле ReminderListViewController.swift инициализируем segmented control с именами listStyle
+    3. В методе viewDidLoad зададим selected segment index через listStyle.rawValue
+    4. Присвоим значение list style segmented control к navigationItem.titleView
+    5. B&R и проверим что segmented control появился 
+    
