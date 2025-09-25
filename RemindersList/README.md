@@ -694,4 +694,23 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. В фалйе ReminderListViewController+Actions.swift в методе didChangeListStyle сделаем вызов refreshBackground
     8. B&R и проверим работу
     
+# Loading reminders EventKit
+    При помощи EventKit можно запросить у пользователя доступ к календарю и заметкам
+    
+## Section 55: Fetch reminders asynchronously
+    EventKit использует колбэки для ответа на запросы асинхронно. В этой секции будем использовать техники swift async concurrency для создания async func 
+    При работе с EventKit могут возникнуть ошибки, начнем с создания enum для ошибок
+    1. В папке Models создадим файл AppErrors.swift и подпишем под Localized Error
+    2. Создадим case в случае ошибки чтения reminders
+    3. Добавим свойство errorDescription
+    4. В паке Model создадим файл EKEventStore+AsyncFetch.swift
+    5. Создадим async throws func reminders
+    6. Сделаем вызов дженерик withCheckedThrowingContinuation
+    7. Сделаем вызов метода EventKit fetchReminders
+    8. Сделаем if let чтобы перевести reminders в локальную константу
+    9. Если успешно, возобновим получение reminders
+    10. Если ошибка покажем её
+    
+    
+    
     
