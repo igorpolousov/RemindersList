@@ -544,3 +544,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Вернём UISwipeActionsConfiguration
     9. В listLayout зададим make swipe actions
     10. B&R проверим как удаляет по свайпу
+    
+# Filtering reminders
+    Сделаем фильтрацию reminders на  три группы: Today Future и All. Так же сделаем segmented control для разных стилей reminder list
+## Section 44: Create a list style enumeration
+    В этой секции зададим ReminderListStyle enumeration с case для каждого доступного стиля. Enum будет содержать функцию, которую будем использовать для фильтрации reminders для каждого стиля
+    
+    1. В папке Models создадим файл ReminderListStyle.swift, создадим enum с таким же именем и Int для raw values
+    2. Добавим 3 кейса, Swift автоматически сделает присвоение raw value каждому case начиная с нуля
+    3. Добавим функцию shouldInclude, которая будет принимать Date и возвращать Bool
+    ReminderListViewController будет отображать только reminders которые будут соотвествовать выбранной пользователям категории
+    4. Добавим булевую константу isInToday
+    5. Сделаем switch 
