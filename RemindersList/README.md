@@ -638,3 +638,17 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. B&R проверим работу
     8. Во viewDidLoad добавим backghroundColor к collection view
     
+## Section 51: Update progress dynamically
+    В этой секции добавим код, чтобы при выполнении пользователем задачи происходило динамическое изменение progress view
+    
+    1. В файле ReminderListViewController.swift добавим вычисляемое свойство progress
+    2. Вычислим долю filtered reminders
+    3. Используем reduce для вычисления процента выполненных filtered renminders. Начальное значение равно 0, чтобы вычислить progress добавим chunkSize к каждому reminder который пользователь выполнил ($1) к предыдущему аккумулированному значению
+    4. Return progress
+    5. В файле ReminderListViewController+DataSource.swift сделаем изменения в updateSnapshot
+    6. B&R и проверим работу 
+    7. В ProgressHeaderView.swift сделаем изменения layoutSubviews
+    8. В фале ReminderListViewController.swift сделаем вызов метода collectionView willDisplaySupplementaryView
+    9. С помощью guard проверим что element kind это progress view
+    10. Сделаем Update свойства progress 
+    11. B&R и проверим работу
