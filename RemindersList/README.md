@@ -762,3 +762,18 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     4. Создадим title для action
     5. Добавим action для alert controller
     6. Сделаем present для контроллера
+    
+## Section 61: Display reminders
+    В этой секции сделаем метод для updateSnapshot
+    1. В файле ReminderListViewController+DataSource.swift добавим вычисляемое свойство reminderStore
+    В следующих шагах будем делать вызов async функций с использованием Task
+    2. Сделаем функцию prepareReminderStore. T
+    3. Добавим do catch блок
+    4. Сделаем запрос всех reminders
+    5. В блоке catch сделаем обработку ошибок
+    Catch блок работает по аналогии со switch, если do блок выбрасывает ошибку он будет проходить по всем catch блокам пока не получит требуемый
+    6. Сделаем updateSnapshot
+    7. В файле ReminderListViewController.swift сделаем массив rfeminders пустым
+    8. Во viewDidLoad добавим функцию prepare reminders store
+    9. Сделаем запрос на доступ к данным пользователя через app target: Вверху клик на RemindersList -> Targets - RemindersList- -> Info -> наводим указатель мыши на плюс рядом c Bundele version stirng-> provacy usage descrioption
+    
