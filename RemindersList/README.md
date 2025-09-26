@@ -750,3 +750,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     7. Выбросим ошибку в случае если доступ ограничен
     8. В случае, если пользователь еще не сделал выбор, сделаем запрос на предоставление доступа
     9. Сделаем выброс ошибки для случаев отклонения доступа и для случая default когда незвестно какая возникла ошибка
+    
+## Section 60: Display errors to user
+    В этой секции сделаем отображение ошибок для пользователя
+    
+    1. В файле ReminderListViewController.swift создадим новую функцию showError
+    Далее будем использовать alert controller для отображения сообщений пользователю
+    2. Создадим константу для title
+    3. Создадим alert controller
+    Рекомендуется использвать alert controller только для критической информации, такой как ошибки
+    4. Создадим title для action
+    5. Добавим action для alert controller
+    6. Сделаем present для контроллера
