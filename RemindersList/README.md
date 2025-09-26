@@ -812,3 +812,16 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     EventKit испоьзует несколько вариантов сообщение пользователю от том что нужно выполнить задание(напоминание) В приложении используем только due date. Уберем остальные.
     5. Сделаем итерацию через все вида alarms и оставим только due date
     6. Если у reminder нет alarm добавим due date
+
+## Section 66: Save reminder invividually
+    В этой секции создадим функцию для сохранения reminder
+    1. В файле ReminderStore.swift создадим функцию save
+    
+    Зачем нужен атрубут @discardAbleResult??
+    
+    2. Используем guard для проверки доступности reminder
+    3. Объявим константу ekReminder
+    4. Добавим блок do catch
+    5. Сделаем update reminder
+    6. Save reminder
+    7. Вернем identifier
