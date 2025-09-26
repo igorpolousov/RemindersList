@@ -13,6 +13,8 @@
 		C2A03C372E85864B004FDD23 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C362E858636004FDD23 /* CAGradientLayer+ListStyle.swift */; };
 		C2A03C392E8591B9004FDD23 /* AppErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C382E8591B1004FDD23 /* AppErrors.swift */; };
 		C2A03C3B2E859333004FDD23 /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C3A2E859333004FDD23 /* EKEventStore+AsyncFetch.swift */; };
+		C2A03C3D2E8677DE004FDD23 /* Reminder+EKreminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C3C2E8677DE004FDD23 /* Reminder+EKreminder.swift */; };
+		C2A03C3F2E867C0D004FDD23 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A03C3E2E867C0D004FDD23 /* ReminderStore.swift */; };
 		C2B2B8CC2DCD043000458FFE /* ReminderViewController+CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2B8CB2DCD043000458FFE /* ReminderViewController+CellConfiguration.swift */; };
 		C2B2B9062DCF584900458FFE /* UIView+PinnedSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B2B9052DCF584900458FFE /* UIView+PinnedSubview.swift */; };
 		C2BF6B7D2D8C848000A1F6F8 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BF6B7C2D8C848000A1F6F8 /* ReminderViewController.swift */; };
@@ -42,6 +44,8 @@
 		C2A03C362E858636004FDD23 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		C2A03C382E8591B1004FDD23 /* AppErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrors.swift; sourceTree = "<group>"; };
 		C2A03C3A2E859333004FDD23 /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
+		C2A03C3C2E8677DE004FDD23 /* Reminder+EKreminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKreminder.swift"; sourceTree = "<group>"; };
+		C2A03C3E2E867C0D004FDD23 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
 		C2B2B8CB2DCD043000458FFE /* ReminderViewController+CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderViewController+CellConfiguration.swift"; sourceTree = "<group>"; };
 		C2B2B9052DCF584900458FFE /* UIView+PinnedSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+PinnedSubview.swift"; sourceTree = "<group>"; };
 		C2BF6B7C2D8C848000A1F6F8 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				C2DC7E7E2D75E8EA0014D9E4 /* Reminder.swift */,
 				C2DC7E802D79C65C0014D9E4 /* Date+Today.swift */,
 				C2A03C3A2E859333004FDD23 /* EKEventStore+AsyncFetch.swift */,
+				C2A03C3C2E8677DE004FDD23 /* Reminder+EKreminder.swift */,
+				C2A03C3E2E867C0D004FDD23 /* ReminderStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,9 +257,11 @@
 				C2378F632DAA690900D3D36D /* ReminderViewController+Section.swift in Sources */,
 				C2B2B8CC2DCD043000458FFE /* ReminderViewController+CellConfiguration.swift in Sources */,
 				C2DC7E762D75D6B20014D9E4 /* ReminderListViewController.swift in Sources */,
+				C2A03C3F2E867C0D004FDD23 /* ReminderStore.swift in Sources */,
 				C2BF6B7D2D8C848000A1F6F8 /* ReminderViewController.swift in Sources */,
 				C2A03C332E851116004FDD23 /* ReminderListStyle.swift in Sources */,
 				C2CC69892E7BDA650043A9D3 /* UIContentConfigurartion+Stateless.swift in Sources */,
+				C2A03C3D2E8677DE004FDD23 /* Reminder+EKreminder.swift in Sources */,
 				C2A03C392E8591B9004FDD23 /* AppErrors.swift in Sources */,
 				C2B2B9062DCF584900458FFE /* UIView+PinnedSubview.swift in Sources */,
 				C2A03C372E85864B004FDD23 /* CAGradientLayer+ListStyle.swift in Sources */,

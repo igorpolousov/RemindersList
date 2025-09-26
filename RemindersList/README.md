@@ -711,6 +711,18 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     9. Если успешно, возобновим получение reminders
     10. Если ошибка покажем её
     
+## Section 56: Convert between two model types
+    Прежде чем можно будет отображать информацию о заметках из EventKit, нужно сконвертировать EKReimnder в подходящий для нас тип данных.
+    1. Добавим еще один case в файл с ошибками
+    2. В папке Model создадим файл Reminder+EKReminder.swift
+    3. Создадаим throws init
+    4. Добавим guard для получения absoluteDate EKReminder или сделаем else throw 
+    5. Назанчим calendarIdentifier к id 
+    6. Сделаем так же с остальными свойствами reminder
     
-    
-    
+## Section 57: Create a reminder store
+    До этой секции для хранения данных использовался простой массив, в этой секции будем создавать хранишище данных
+    1. В паке Models создадим новый файл ReminderStore.swift
+    2. Создадим свойство shared 
+    3. Создадим свойство ekStore
+    4. Создадим свойство isAvailable которое будет возвращать true если пользователь предоставли полный доступ к напоминаниям 
