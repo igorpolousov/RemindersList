@@ -783,3 +783,15 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     2. Зададим reminder время и дату
     3. B&R наше приложение и дадим доступ приложению к заметкам
     4. Проверим что заметки из приложения появились в нашем приложении
+    
+# Saving reminders
+    Нужно добавить еще одну важную функцию, когда приложение закрывается, онго теряет все данные и сделанные изменения, сделаем так чтобы изменения сохранялись в EventKit Calendar
+## Section 63: Respond to change notification
+    В этой секции сделаем получение reminders из EventKit  в любой момент внесения изменений. Подпишемся на уведомления, которые наше приложение будет слушать и будем вызывать функцию если получены будут изменения
+    Начнём с функции в которой будем перезагружать все reminders полученные из EventKit
+    1. В файле RemindersListViewController+DataSource.swift создадим функцию remindersStoreChanged()
+    2. Ждём результата функции readAll и присвоим значение свойству reminders
+    3. updateSnapshot
+    4. Создадим метод, который будем вызывать в случае изменения reminders. В файле RemindersListViewController+Actions.swift создадим функцию eventStoreChanged
+    5. Чтобы слушать уведомления, нужно зарегистрирвоать класс как наблюдателя. В файле RemindersListViewController+DataSource.swift в функции prepareReminderStore подпишемся на EKEventStoreChanged
+    6. B&R&Test
