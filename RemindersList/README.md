@@ -803,3 +803,12 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     2. В файле ReminderStore.swift создадим функцию read
     3. Добавим guard который получит требуемое событие календаря и скастим его до EKReminder
     4. Вернем reminder
+
+## Section 65: Convert between model types
+    1. В папке Models содадим файл EKReminder+Reminder.swift
+    2. Создадитм функцию update
+    3. Напишем значения для title notes и isCompleted
+    4. Для свойства calendar присвоим значение defaultCalendarForNewReminders
+    EventKit испоьзует несколько вариантов сообщение пользователю от том что нужно выполнить задание(напоминание) В приложении используем только due date. Уберем остальные.
+    5. Сделаем итерацию через все вида alarms и оставим только due date
+    6. Если у reminder нет alarm добавим due date
