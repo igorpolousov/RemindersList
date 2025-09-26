@@ -777,3 +777,9 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     8. Во viewDidLoad добавим функцию prepare reminders store
     9. Сделаем запрос на доступ к данным пользователя через app target: Вверху клик на RemindersList -> Targets - RemindersList- -> Info -> наводим указатель мыши на плюс рядом c Bundele version stirng-> provacy usage descrioption
     
+## Section 62: Test EvemtKit integration
+    В этой секции делается проверка того что reminders сделанные в другом app попадают в наше приложение
+    1. Создадим заметку в приложении заметки на симуляторе
+    2. Зададим reminder время и дату
+    3. B&R наше приложение и дадим доступ приложению к заметкам
+    4. Проверим что заметки из приложения появились в нашем приложении
