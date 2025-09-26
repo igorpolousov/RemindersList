@@ -12,6 +12,8 @@ enum AppErrors: LocalizedError {
     case accessDenied
     case failedReadingreminders
     case reminderHasNoDueDate
+    case accessRestricted
+    case unknown
     
     var errorDescription: String? {
         switch self {
@@ -23,6 +25,10 @@ enum AppErrors: LocalizedError {
             
         case .accessDenied:
             return NSLocalizedString("The app doesn't have permossion to read reminders", comment: "Access denied error description")
+        case .accessRestricted:
+            return NSLocalizedString("This device doesn't allow access to reminders", comment: "Access restricted error description")
+        case .unknown:
+            return NSLocalizedString("An unknown error occured", comment: "unknown error description")
         }
  
     }
