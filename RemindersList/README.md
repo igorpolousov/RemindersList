@@ -795,3 +795,11 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     4. Создадим метод, который будем вызывать в случае изменения reminders. В файле RemindersListViewController+Actions.swift создадим функцию eventStoreChanged
     5. Чтобы слушать уведомления, нужно зарегистрирвоать класс как наблюдателя. В файле RemindersListViewController+DataSource.swift в функции prepareReminderStore подпишемся на EKEventStoreChanged
     6. B&R&Test
+    
+## Section 64: Read reminders individually
+    В этой секции напришем функцию которая будет получать Reminder buy id
+    Начнем с добавления ошибки, если прилжение не может прочитать event kit calendar
+    1. В файле ошибок добавим еще один case
+    2. В файле ReminderStore.swift создадим функцию read
+    3. Добавим guard который получит требуемое событие календаря и скастим его до EKReminder
+    4. Вернем reminder
