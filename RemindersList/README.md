@@ -833,3 +833,8 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     2. Добавим do catch блок
     3. Присвоим новое значение id для reminder
     4. В catch добавим ошибку если пользователь не дал доступ и сохранить не удалось
+    
+## Section 68: Save updated reminder
+    В этой секции будем сохранять изменения в существующих reminder
+    1. В updateReminder добавим do блок
+    2. Добавим catch блоки
