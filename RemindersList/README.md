@@ -825,3 +825,11 @@ struct NSDiffableDataSourceSnapshot<SectionIdentifierType, ItemIdentifierType> w
     5. Сделаем update reminder
     6. Save reminder
     7. Вернем identifier
+    
+## Section 67: Save added remimders
+    В этой секции будем сохранять reminder, который пользователь будет добавлять.
+    EventKit присваеват уникальный идентификатор каждому reminder. Сделаем изменяемую копию reminder, так чтобы было можно получить новый идентификатор
+    1. В файле ReminderListViewController+DataSource.swift в addReminder добавим копию reminder. Параметры функци( принимаемые значения) по умолчанию константы, для того чтобы иметь возможность менять значения, необходимо либо создать переменную внутри функции либо использовать inout
+    2. Добавим do catch блок
+    3. Присвоим новое значение id для reminder
+    4. В catch добавим ошибку если пользователь не дал доступ и сохранить не удалось
